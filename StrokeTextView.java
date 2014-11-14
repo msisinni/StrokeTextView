@@ -29,7 +29,7 @@ public class StrokeTextView extends TextView {
 		super(context, attrs, defStyle);
 
 
-		final int strokeWidth = (int) (getTextSize() / 5);
+		final int strokeWidth = Math.min((int) (getTextSize() / 5), 7);
 
 		mStrokePaint.setARGB(255, 0, 0, 0);
 		mStrokePaint.setTypeface(Typeface.DEFAULT_BOLD);
