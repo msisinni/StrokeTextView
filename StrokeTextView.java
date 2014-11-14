@@ -16,7 +16,6 @@ public class StrokeTextView extends TextView {
 	private TextPaint mStrokePaint = new TextPaint();
 	private TextPaint mWordsPaint = new TextPaint();
 
-
 	public StrokeTextView(Context context) {
 		this(context, null);
 	}
@@ -27,7 +26,6 @@ public class StrokeTextView extends TextView {
 
 	public StrokeTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-
 
 		final int strokeWidth = Math.min((int) (getTextSize() / 5), 7);
 
@@ -43,13 +41,6 @@ public class StrokeTextView extends TextView {
 		mWordsPaint.setAntiAlias(true);
 		mWordsPaint.setTextScaleX(getTextScaleX());
 
-
-	}
-
-
-	@Override
-	public boolean onPreDraw() {
-		return super.onPreDraw();
 	}
 
 	@Override
@@ -70,8 +61,4 @@ public class StrokeTextView extends TextView {
 		canvas.restore();
 	}
 
-	/**
-	 * TODO:
-	 * -make DynamicLayout give room for stroke;
-	 */
 }
